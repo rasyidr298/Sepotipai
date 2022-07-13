@@ -11,7 +11,6 @@ struct Song: Identifiable {
     var id = UUID()
     var singer: String
     var title: String
-    
 }
 
 struct ContentView: View {
@@ -48,7 +47,14 @@ struct ContentView: View {
                 }.frame(width: 350, height: 100, alignment: .leading)
                 
                 List(playlist){ i in
-                    SongCellCustom(song: i, titleSongPlayed: $titleSongPlayed, isPlayingSomething: $isPlayingSomething)
+                    SongCellCustom(song: i)
+                        .onTapGesture {
+                            titleSongPlayed = i.singer + " - " + i.title
+                            if i.singer == "BridgeBoys"{
+                                AVService.shared.playMusic()
+                            }
+                            isPlayingSomething = true
+                        }
                 }
                 
             }
@@ -66,7 +72,7 @@ class AVService{
     
     func playMusic(){
         //akses alamat
-        let path = Bundle.main.path(forResource: "music", ofType:"wav")!
+        let path = Bundle.main.path(forResource: "music", ofType:"wav") ?? ""
         //ubah alamatnya jadi url
         let url = URL(fileURLWithPath: path)
         do {
@@ -84,22 +90,13 @@ class AVService{
 struct SongCellCustom : View {
     let song : Song
     
-    @Binding var titleSongPlayed : String
-    @Binding var isPlayingSomething : Bool
     var body: some View{
-        Button {
-            titleSongPlayed = song.singer + " - " + song.title
-            if song.singer == "BridgeBoys"{
-                AVService.shared.playMusic()
-            }
-            isPlayingSomething = true
-            
-        } label: {
-            HStack{
-                Text(song.singer + " - " + song.title)
-                Spacer()
-                Image(systemName: "play.circle.fill").font(.system(size: 30)).foregroundColor(.green)
-            }
+        
+        HStack{
+            Text(song.singer + " - " + song.title)
+            Spacer()
+            Image(systemName: "play.circle.fill").font(.system(size: 30)).foregroundColor(.green)
         }
+        
     }
 }
