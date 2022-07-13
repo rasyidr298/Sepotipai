@@ -15,11 +15,16 @@ struct Song: Identifiable {
 }
 
 struct ContentView: View {
-    var playlist = [Song(singer: "U2", title: "Elevation"), Song(singer: "Ciara", title: "Level up")]
+    var playlist = [
+        Song(singer: "U2", title: "Elevation"),
+        Song(singer: "Ciara", title: "Level up"),
+        Song(singer: "BridgeBoys", title: "Ka MoNANYA"),]
+    
+    
     
     @State private var titleSongPlayed : String = ""
     @State private var isPlayingSomething : Bool = false
-    @State private var userName : String = ""
+    
     
     var body: some View {
         NavigationView(){
@@ -28,6 +33,9 @@ struct ContentView: View {
                     Button(action: {
                         print("play Playlist")
                         isPlayingSomething.toggle()
+                        if !isPlayingSomething{
+                            AVService.shared.player?.stop()
+                        }
                     }, label: {
                         if isPlayingSomething{
                             Image(systemName: "pause.circle.fill").font(.system(size: 56)).foregroundColor(.blue)
@@ -38,11 +46,37 @@ struct ContentView: View {
                     })
                     Text(titleSongPlayed)
                 }.frame(width: 350, height: 100, alignment: .leading)
-                TextField("Siapa namamu?", text: $userName).padding()
+                
                 List(playlist){ i in
                     SongCellCustom(song: i, titleSongPlayed: $titleSongPlayed, isPlayingSomething: $isPlayingSomething)
                 }
-            }.navigationBarTitle(Text(userName)).foregroundColor(.gray)
+                
+            }
+        }
+    }
+    
+   
+}
+
+import AVFoundation
+
+class AVService{
+    var player : AVAudioPlayer?
+    static let shared = AVService()
+    
+    func playMusic(){
+        //akses alamat
+        let path = Bundle.main.path(forResource: "music", ofType:"wav")!
+        //ubah alamatnya jadi url
+        let url = URL(fileURLWithPath: path)
+        do {
+            //masukin url ke audio player
+            player = try AVAudioPlayer(contentsOf: url)
+            
+            //player di mainkan
+            player?.play()
+        } catch {
+            // couldn't load file :(
         }
     }
 }
@@ -55,7 +89,11 @@ struct SongCellCustom : View {
     var body: some View{
         Button {
             titleSongPlayed = song.singer + " - " + song.title
+            if song.singer == "BridgeBoys"{
+                AVService.shared.playMusic()
+            }
             isPlayingSomething = true
+            
         } label: {
             HStack{
                 Text(song.singer + " - " + song.title)
