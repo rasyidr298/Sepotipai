@@ -11,7 +11,6 @@ struct Song: Identifiable {
     var id = UUID()
     var singer: String
     var title: String
-    
 }
 
 struct ContentView: View {
@@ -78,7 +77,7 @@ class AVService{
     
     func playMusic(){
         //akses alamat
-        let path = Bundle.main.path(forResource: "music", ofType:"wav")!
+        let path = Bundle.main.path(forResource: "music", ofType:"wav") ?? ""
         //ubah alamatnya jadi url
         let url = URL(fileURLWithPath: path)
         do {
@@ -97,10 +96,12 @@ struct SongCellCustom : View {
     let song : Song
     
     var body: some View{
+        
         HStack{
             Text(song.singer + " - " + song.title)
             Spacer()
             Image(systemName: "play.circle.fill").font(.system(size: 30)).foregroundColor(.green)
         }
+        
     }
 }
