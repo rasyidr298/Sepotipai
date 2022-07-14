@@ -11,8 +11,67 @@
 		3994D15A26955F0D00592B1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3994D15926955F0D00592B1E /* ContentView.swift */; };
 		3994D15C26955F1400592B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3994D15B26955F1400592B1E /* Assets.xcassets */; };
 		3994D15F26955F1400592B1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3994D15E26955F1400592B1E /* Preview Assets.xcassets */; };
+		F616FE80287FC2400015CA60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F616FE7F287FC2400015CA60 /* Assets.xcassets */; };
+		F616FE86287FC2410015CA60 /* SepotipaiW WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F616FE85287FC2410015CA60 /* SepotipaiW WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F616FE8B287FC2410015CA60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616FE8A287FC2410015CA60 /* ContentView.swift */; };
+		F616FE8D287FC2410015CA60 /* SwiftUITutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616FE8C287FC2410015CA60 /* SwiftUITutorialApp.swift */; };
+		F616FE8F287FC2410015CA60 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616FE8E287FC2410015CA60 /* ComplicationController.swift */; };
+		F616FE91287FC2430015CA60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F616FE90287FC2430015CA60 /* Assets.xcassets */; };
+		F616FE94287FC2430015CA60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F616FE93287FC2430015CA60 /* Preview Assets.xcassets */; };
+		F616FE98287FC2430015CA60 /* SepotipaiW.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F616FE7D287FC23E0015CA60 /* SepotipaiW.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F616FEA3287FC6370015CA60 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616FEA2287FC6370015CA60 /* Song.swift */; };
+		F616FEA4287FC66D0015CA60 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616FEA2287FC6370015CA60 /* Song.swift */; };
+		F616FEA7287FC7030015CA60 /* AVServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616FEA6287FC7030015CA60 /* AVServices.swift */; };
+		F616FEA8287FC7130015CA60 /* AVServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616FEA6287FC7030015CA60 /* AVServices.swift */; };
+		F616FEA9287FC85C0015CA60 /* music.wav in Resources */ = {isa = PBXBuildFile; fileRef = F63AEAB1287EB2DF00281B65 /* music.wav */; };
+		F616FEAC287FC95E0015CA60 /* ListSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616FEAB287FC95E0015CA60 /* ListSongView.swift */; };
+		F616FEAE287FC9F10015CA60 /* SongCellCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616FEAD287FC9F10015CA60 /* SongCellCustom.swift */; };
+		F616FEAF287FCA270015CA60 /* SongCellCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616FEAD287FC9F10015CA60 /* SongCellCustom.swift */; };
+		F616FEB1287FCDD00015CA60 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616FEB0287FCDD00015CA60 /* ParentView.swift */; };
 		F63AEAB2287EB2DF00281B65 /* music.wav in Resources */ = {isa = PBXBuildFile; fileRef = F63AEAB1287EB2DF00281B65 /* music.wav */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F616FE87287FC2410015CA60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3994D14C26955F0D00592B1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F616FE84287FC2410015CA60;
+			remoteInfo = "SepotipaiW WatchKit Extension";
+		};
+		F616FE96287FC2430015CA60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3994D14C26955F0D00592B1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F616FE7C287FC23E0015CA60;
+			remoteInfo = SepotipaiW;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F616FE99287FC2430015CA60 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F616FE98287FC2430015CA60 /* SepotipaiW.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F616FE9C287FC2430015CA60 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F616FE86287FC2410015CA60 /* SepotipaiW WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3994D15426955F0D00592B1E /* SwiftUITutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,11 +80,32 @@
 		3994D15B26955F1400592B1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3994D15E26955F1400592B1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3994D16026955F1400592B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F616FE7D287FC23E0015CA60 /* SepotipaiW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SepotipaiW.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F616FE7F287FC2400015CA60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F616FE85287FC2410015CA60 /* SepotipaiW WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SepotipaiW WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F616FE8A287FC2410015CA60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F616FE8C287FC2410015CA60 /* SwiftUITutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITutorialApp.swift; sourceTree = "<group>"; };
+		F616FE8E287FC2410015CA60 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		F616FE90287FC2430015CA60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F616FE93287FC2430015CA60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F616FE95287FC2430015CA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F616FEA2287FC6370015CA60 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		F616FEA6287FC7030015CA60 /* AVServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVServices.swift; sourceTree = "<group>"; };
+		F616FEAB287FC95E0015CA60 /* ListSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSongView.swift; sourceTree = "<group>"; };
+		F616FEAD287FC9F10015CA60 /* SongCellCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCellCustom.swift; sourceTree = "<group>"; };
+		F616FEB0287FCDD00015CA60 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		F63AEAB1287EB2DF00281B65 /* music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = music.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3994D15126955F0D00592B1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F616FE82287FC2410015CA60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,7 +118,10 @@
 		3994D14B26955F0D00592B1E = {
 			isa = PBXGroup;
 			children = (
+				F616FEA1287FC6240015CA60 /* Shared */,
 				3994D15626955F0D00592B1E /* SwiftUITutorial */,
+				F616FE7E287FC23E0015CA60 /* SepotipaiW */,
+				F616FE89287FC2410015CA60 /* SepotipaiW WatchKit Extension */,
 				3994D15526955F0D00592B1E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				3994D15426955F0D00592B1E /* SwiftUITutorial.app */,
+				F616FE7D287FC23E0015CA60 /* SepotipaiW.app */,
+				F616FE85287FC2410015CA60 /* SepotipaiW WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +157,55 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F616FE7E287FC23E0015CA60 /* SepotipaiW */ = {
+			isa = PBXGroup;
+			children = (
+				F616FE7F287FC2400015CA60 /* Assets.xcassets */,
+			);
+			path = SepotipaiW;
+			sourceTree = "<group>";
+		};
+		F616FE89287FC2410015CA60 /* SepotipaiW WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F616FEAA287FC9340015CA60 /* View */,
+				F616FE8C287FC2410015CA60 /* SwiftUITutorialApp.swift */,
+				F616FE8E287FC2410015CA60 /* ComplicationController.swift */,
+				F616FE90287FC2430015CA60 /* Assets.xcassets */,
+				F616FE95287FC2430015CA60 /* Info.plist */,
+				F616FE92287FC2430015CA60 /* Preview Content */,
+			);
+			path = "SepotipaiW WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		F616FE92287FC2430015CA60 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F616FE93287FC2430015CA60 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F616FEA1287FC6240015CA60 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F616FEA2287FC6370015CA60 /* Song.swift */,
+				F616FEA6287FC7030015CA60 /* AVServices.swift */,
+				F616FEAD287FC9F10015CA60 /* SongCellCustom.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F616FEAA287FC9340015CA60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F616FE8A287FC2410015CA60 /* ContentView.swift */,
+				F616FEAB287FC95E0015CA60 /* ListSongView.swift */,
+				F616FEB0287FCDD00015CA60 /* ParentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,15 +216,51 @@
 				3994D15026955F0D00592B1E /* Sources */,
 				3994D15126955F0D00592B1E /* Frameworks */,
 				3994D15226955F0D00592B1E /* Resources */,
+				F616FE99287FC2430015CA60 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F616FE97287FC2430015CA60 /* PBXTargetDependency */,
 			);
 			name = SwiftUITutorial;
 			productName = SwiftUITutorial;
 			productReference = 3994D15426955F0D00592B1E /* SwiftUITutorial.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F616FE7C287FC23E0015CA60 /* SepotipaiW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F616FEA0287FC2430015CA60 /* Build configuration list for PBXNativeTarget "SepotipaiW" */;
+			buildPhases = (
+				F616FE7B287FC23E0015CA60 /* Resources */,
+				F616FE9C287FC2430015CA60 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F616FE88287FC2410015CA60 /* PBXTargetDependency */,
+			);
+			name = SepotipaiW;
+			productName = SepotipaiW;
+			productReference = F616FE7D287FC23E0015CA60 /* SepotipaiW.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F616FE84287FC2410015CA60 /* SepotipaiW WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F616FE9F287FC2430015CA60 /* Build configuration list for PBXNativeTarget "SepotipaiW WatchKit Extension" */;
+			buildPhases = (
+				F616FE81287FC2410015CA60 /* Sources */,
+				F616FE82287FC2410015CA60 /* Frameworks */,
+				F616FE83287FC2410015CA60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SepotipaiW WatchKit Extension";
+			productName = "SepotipaiW WatchKit Extension";
+			productReference = F616FE85287FC2410015CA60 /* SepotipaiW WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,11 +268,17 @@
 		3994D14C26955F0D00592B1E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					3994D15326955F0D00592B1E = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					F616FE7C287FC23E0015CA60 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F616FE84287FC2410015CA60 = {
+						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
@@ -120,6 +296,8 @@
 			projectRoot = "";
 			targets = (
 				3994D15326955F0D00592B1E /* SwiftUITutorial */,
+				F616FE7C287FC23E0015CA60 /* SepotipaiW */,
+				F616FE84287FC2410015CA60 /* SepotipaiW WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -135,6 +313,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F616FE7B287FC23E0015CA60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F616FE80287FC2400015CA60 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F616FE83287FC2410015CA60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F616FE94287FC2430015CA60 /* Preview Assets.xcassets in Resources */,
+				F616FE91287FC2430015CA60 /* Assets.xcassets in Resources */,
+				F616FEA9287FC85C0015CA60 /* music.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -142,12 +338,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F616FEA3287FC6370015CA60 /* Song.swift in Sources */,
 				3994D15A26955F0D00592B1E /* ContentView.swift in Sources */,
+				F616FEAF287FCA270015CA60 /* SongCellCustom.swift in Sources */,
+				F616FEA7287FC7030015CA60 /* AVServices.swift in Sources */,
 				3994D15826955F0D00592B1E /* SwiftUITutorialApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F616FE81287FC2410015CA60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F616FEB1287FCDD00015CA60 /* ParentView.swift in Sources */,
+				F616FEA4287FC66D0015CA60 /* Song.swift in Sources */,
+				F616FEAE287FC9F10015CA60 /* SongCellCustom.swift in Sources */,
+				F616FE8B287FC2410015CA60 /* ContentView.swift in Sources */,
+				F616FE8D287FC2410015CA60 /* SwiftUITutorialApp.swift in Sources */,
+				F616FEA8287FC7130015CA60 /* AVServices.swift in Sources */,
+				F616FE8F287FC2410015CA60 /* ComplicationController.swift in Sources */,
+				F616FEAC287FC95E0015CA60 /* ListSongView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F616FE88287FC2410015CA60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F616FE84287FC2410015CA60 /* SepotipaiW WatchKit Extension */;
+			targetProxy = F616FE87287FC2410015CA60 /* PBXContainerItemProxy */;
+		};
+		F616FE97287FC2430015CA60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F616FE7C287FC23E0015CA60 /* SepotipaiW */;
+			targetProxy = F616FE96287FC2430015CA60 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3994D16126955F1400592B1E /* Debug */ = {
@@ -310,6 +537,124 @@
 			};
 			name = Release;
 		};
+		F616FE9A287FC2430015CA60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59G66T9GCN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = SepotipaiW_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = SepotipaiW;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = AR.SwiftUITutorial;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AR.SwiftUITutorial.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		F616FE9B287FC2430015CA60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59G66T9GCN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = SepotipaiW_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = SepotipaiW;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = AR.SwiftUITutorial;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AR.SwiftUITutorial.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		F616FE9D287FC2430015CA60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SepotipaiW WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 52RX5R54N7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SepotipaiW WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "SepotipaiW WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AR.SwiftUITutorial.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		F616FE9E287FC2430015CA60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SepotipaiW WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 52RX5R54N7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SepotipaiW WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "SepotipaiW WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AR.SwiftUITutorial.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +672,24 @@
 			buildConfigurations = (
 				3994D16426955F1400592B1E /* Debug */,
 				3994D16526955F1400592B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F616FE9F287FC2430015CA60 /* Build configuration list for PBXNativeTarget "SepotipaiW WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F616FE9D287FC2430015CA60 /* Debug */,
+				F616FE9E287FC2430015CA60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F616FEA0287FC2430015CA60 /* Build configuration list for PBXNativeTarget "SepotipaiW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F616FE9A287FC2430015CA60 /* Debug */,
+				F616FE9B287FC2430015CA60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
