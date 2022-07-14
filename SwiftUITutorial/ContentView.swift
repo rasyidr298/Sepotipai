@@ -22,7 +22,7 @@ struct ContentView: View {
     
     
     
-    @State private var titleSongPlayed : String = ""
+    @State private var playingSong : Song = Song(singer: "", title: "")
     @State private var isPlayingSomething : Bool = false
     
     
@@ -35,6 +35,10 @@ struct ContentView: View {
                         isPlayingSomething.toggle()
                         if !isPlayingSomething{
                             AVService.shared.player?.stop()
+                        }else{
+                            if playingSong.singer == "BridgeBoys"{
+                                AVService.shared.playMusic()
+                            }
                         }
                     }, label: {
                         if isPlayingSomething{
@@ -44,11 +48,19 @@ struct ContentView: View {
                         }
                         
                     })
-                    Text(titleSongPlayed)
+                    Text(playingSong.title + " - " + playingSong.singer)
+                       
                 }.frame(width: 350, height: 100, alignment: .leading)
                 
                 List(playlist){ i in
-                    SongCellCustom(song: i, titleSongPlayed: $titleSongPlayed, isPlayingSomething: $isPlayingSomething)
+                    SongCellCustom(song: i)
+                        .onTapGesture {
+                            playingSong = i
+                            if i.singer == "BridgeBoys"{
+                                AVService.shared.playMusic()
+                            }
+                            isPlayingSomething = true
+                        }
                 }
                 
             }
@@ -84,22 +96,11 @@ class AVService{
 struct SongCellCustom : View {
     let song : Song
     
-    @Binding var titleSongPlayed : String
-    @Binding var isPlayingSomething : Bool
     var body: some View{
-        Button {
-            titleSongPlayed = song.singer + " - " + song.title
-            if song.singer == "BridgeBoys"{
-                AVService.shared.playMusic()
-            }
-            isPlayingSomething = true
-            
-        } label: {
-            HStack{
-                Text(song.singer + " - " + song.title)
-                Spacer()
-                Image(systemName: "play.circle.fill").font(.system(size: 30)).foregroundColor(.green)
-            }
+        HStack{
+            Text(song.singer + " - " + song.title)
+            Spacer()
+            Image(systemName: "play.circle.fill").font(.system(size: 30)).foregroundColor(.green)
         }
     }
 }
